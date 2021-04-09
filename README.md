@@ -27,10 +27,10 @@ The prerequisite of our project is:
 ns-3.31
 ```
 The official download url of ns-3.31 is [https://www.nsnam.org/releases/ns-3-31/](https://www.nsnam.org/releases/ns-3-31/).
+
 We only test our project on:
 ```
 Ubuntu 20.04
-
 ```
 
 ### 4. Build and Installation
@@ -38,7 +38,13 @@ After the installation of ns-3.31, replace
 ```
 ./<Your workplace>/ns-allinone-3.31/ns-3.31/contrib
 ```
-with the folder **"contrib"** we offered. Once the source code has been successfully downloaded, you need to build ns-3
+with the folder **"contrib"** we offered. Then, extract radio_delay.zip:
+```
+cd ./<Your workplace>/ns-allinone-3.31/ns-3.31/contrib/mec-sim/
+unzip model/radio_delay.zip
+rm model/radio_delay.zip
+```
+Once the source code has been successfully downloaded, you need to re-build ns-3
 ```
 ./waf clean
 ./waf configure --build-profile=debug --enable-examples --enable-tests
