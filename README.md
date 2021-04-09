@@ -36,18 +36,18 @@ Ubuntu 20.04
 ### 4. Build and Installation
 After the installation of ns-3.31, replace
 ```
-./<Your workplace>/ns-allinone-3.31/ns-3.31/contrib
+./<Your workplace>/ns-3-allinone/ns-3.31/contrib
 ```
 with the folder **"contrib"** we offered. Then, extract radio_delay.zip:
 ```
-cd ./<Your workplace>/ns-allinone-3.31/ns-3.31/contrib/mec-sim/
-unzip model/radio_delay.zip
-rm model/radio_delay.zip
+cd ./<Your workplace>/ns-3-allinone/ns-3.31/contrib/mec-sim/model
+unzip radio_delay.zip
+rm radio_delay.zip
 ```
 Once the source code has been successfully downloaded, you need to re-build ns-3
 ```
-./waf clean
 ./waf configure --build-profile=debug --enable-examples --enable-tests
+./waf clean
 ./waf
 ```
 
